@@ -8,9 +8,6 @@ const noteBody = document.querySelector('.add-note');
 const noteImg = document.querySelector('.note-img-input');
 const noteAlt = document.querySelector('.note-alt-input');
 
-
-
-
 /**
  * return HTML with user note
  * @param {obj} note - note value from user input or localStorage
@@ -36,7 +33,20 @@ function createItem(note){
   return item
 }
 
-const notes = [];
+// https://www.npmjs.com/package/idb-keyval
+
+idbKeyval.set('hello', 'world')
+  .then(() => console.log('It worked!'))
+  .catch(err => console.log('It failed!', err));
+
+idbKeyval.get('hello').then(val => console.log(val));
+
+const notes = [{
+  body: 'asdasdasd',
+  img: 'asd',
+  alt: 'asdasd',
+  date: '2016 09 09'
+}];
 
 if (notes) {
   notes.forEach((el) => {
