@@ -1,0 +1,138 @@
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+time {
+  font-size: 12px;
+  font-style: italic;
+  color: #333
+}
+
+.main-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  background: #cff0ff;
+  font-family: 'verdana', sans-serif;
+  width: 100%;
+  max-width: 450px;
+  min-height: 400px;
+  color: #111;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 14px 28px #00000020, 0 10px 10px #00000022;
+}
+
+.note-item-label {
+  display: block;
+  text-align: left;
+}
+
+.add-note {
+  width: 100%;
+  font-size: 14px;
+}
+
+.input {
+  box-sizing: border-box;
+  border: none;
+  border-left: 12px solid #b8b0e4;
+  width: 100%;
+}
+
+.notes-list {
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+
+.note-item-wrapper {
+  margin-bottom: 20px;
+}
+
+.note-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.note-body {
+  text-align: left;
+  margin-bottom: 0;
+  white-space: pre-line;
+}
+
+.note-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 10px 25px 10px;
+  margin-bottom: 25px;
+  list-style: none;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 14px 28px #00000020, 0 10px 10px #00000022;
+}
+
+.nav {
+  background: #e4fff6;
+  border-radius: 75px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: none;
+}
+
+.note-ui {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.btn {
+  border: none;
+  font-size: 16px;
+  border-radius: 3px;
+  background: #66c97c;
+}
+
+.note-remove-btn {
+  background: #e47171;
+}
+
+.clear-note-btn {
+  background: #f47940;
+  align-self: flex-end;
+  margin-top: 15px;
+}
+
+.main-headline {
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 500px) {
+  .btn {
+    font-size: 18px;
+    min-width: 2em;
+    min-height: 2em;
+  }
+}

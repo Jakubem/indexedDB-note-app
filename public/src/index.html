@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#223366">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./images/icons/app-icon.svg" type="image/x-icon">
+  <title>Lista rzeczy do zrobienia</title>
+</head>
+
+<body>
+
+<main class="main-card">
+  <h1 class="main-headline">
+    notatki
+  </h1>
+  <div class="note-item-wrapper">
+    <label class="note-item-label">treść notatki:
+      <textarea name="content" class="add-note input" cols="30" rows="5"></textarea>
+    </label>
+    <label class="note-item-label">
+      Adres obrazka:
+      <input id="note-img-input"class="note-img-input input" type="text">
+    </label>
+    <label class="note-item-label">Alt text:
+      <input id="note-alt-input" class="note-alt-input input" type="text">
+    </label>
+    <button class="note-submit-btn btn">Dodaj notatkę</button>
+    <button class="clear-note-btn btn">Usuń wszystko</button>
+  </div>
+  <ul class="notes-list">
+  </ul>
+</main>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/idb-keyval@3/dist/idb-keyval-iife.min.js"></script>
+<script src="./main.js">
+</script>
+
+</html>
