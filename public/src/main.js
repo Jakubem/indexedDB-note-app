@@ -35,24 +35,24 @@ function createItem(note){
 
 // https://www.npmjs.com/package/idb-keyval
 
-idbKeyval.set('hello', 'world')
-  .then(() => console.log('It worked!'))
-  .catch(err => console.log('It failed!', err));
-
-idbKeyval.get('hello').then(val => console.log(val));
-
 const notes = [{
   body: 'asdasdasd',
-  img: 'asd',
+  img: 'https://www.w3.org/2008/site/images/logo-w3c-screen-lg',
+  alt: 'asdasd',
+  date: '2016 09 09'
+},
+{
+  body: 'asdasdasd',
+  img: 'https://www.w3.org/2008/site/images/logo-w3c-screen-lg',
   alt: 'asdasd',
   date: '2016 09 09'
 }];
 
-if (notes) {
-  notes.forEach((el) => {
-    noteList.appendChild(createItem(el));
-  })
-}
+idbKeyval.set('hello', notes)
+  .then(() => console.log('It worked!'))
+  .catch(err => console.log('It failed!', err));
+
+idbKeyval.get('hello').then(val => val.forEach(el => noteList.appendChild(createItem(el))))
 
 noteSubmitBtn.addEventListener('click', addNote);
 
