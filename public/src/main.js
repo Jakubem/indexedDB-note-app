@@ -35,7 +35,6 @@
   }
 
   // https://www.npmjs.com/package/idb-keyval
-
   const map = new Map();
   let notes = await idbKeyval.get('notes');
   if (!notes) {
@@ -76,9 +75,7 @@
       const clickedNote = e.target.parentNode.parentNode;
       clickedNote.remove();
       const clickedObj = map.get(clickedNote);
-      console.log(notes);
       notes = notes.filter(el => el !== clickedObj);
-      console.log(notes);
       await idbKeyval.set('notes', notes)
         .catch(err => console.log('It failed!', err));
     }
