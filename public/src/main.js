@@ -1,7 +1,6 @@
 (async () => {
   const noteImgPath = document.querySelector('.note-img-input');
   const noteImgAlt = document.querySelector('.note-alt-input');
-  const noteClearBtn = document.querySelector('.clear-note-btn');
   const noteSubmitBtn = document.querySelector('.note-submit-btn');
   const noteList = document.querySelector('.notes-list');
 
@@ -65,7 +64,10 @@
     map.set(node, note);
     notes.push(note);
     idbKeyval.set('notes', notes)
-    .catch(err => console.log('It failed!', err));
+    .catch(err => console.error('submit failed: ', err));
+    noteBody.value = '';
+    noteImg.value = '';
+    noteAlt.value = '';
   }
 
   // add single eventlistener and check target parent to remove specific item
@@ -80,9 +82,4 @@
         .catch(err => console.log('It failed!', err));
     }
   })
-
-  noteClearBtn.addEventListener('click', () => {
-    noteList.innerHTML = '';
-    idbKeyval.clear();
-  });
 })()
